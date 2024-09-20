@@ -41,7 +41,7 @@ function Page() {
 			console.error("Error fetching items:", error);
 		}
 	};
-	// POST HANDLER
+	// POST HANDLER and states
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [errorMessage, setErrorMessage] = useState<string | null>(null);
 	const [showErrorDialog, setShowErrorDialog] = useState(false);
