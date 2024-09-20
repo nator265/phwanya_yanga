@@ -8,10 +8,20 @@ require('dotenv').config();
 const app = express();
 const uri = process.env.MONGODB_URI;
 const PORT = process.env.PORT || 8080;
+const allowedOrigins = ['https://phwanyayanga.onrender.com'];
 
-app.use(cors({
-  origin: 'https://phwanyayanga.onrender.com/',
-}));
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true, // If you are handling cookies or tokens
+};
+
+app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: true })); // For parsing application/x-www-form-urlencoded
 app.use(express.json()); // For parsing application/json
 
