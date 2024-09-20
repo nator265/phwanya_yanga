@@ -19,6 +19,18 @@ function Page() {
 		description: string;
 	}
 	const [items, setItems] = useState<item[]>([]);
+
+	const fetchItems = async () => {
+		try {
+			const response = await fetch(
+				"https://phwanyayanga-bvck3nd.onrender.com/api/crud/menuitems",
+			);
+			const data = await response.json();
+			setItems(data);
+		} catch (error) {
+			console.error("Error fetching items:", error);
+		}
+	};
 	// GET HANDLER
 	useEffect(() => {
 		const fetchData = async () => {
@@ -30,17 +42,6 @@ function Page() {
 		};
 		fetchData();
 	}, []);
-	const fetchItems = async () => {
-		try {
-			const response = await fetch(
-				"https://phwanyayanga-bvck3nd.onrender.com/api/crud/menuitems"
-			);
-			const data = await response.json();
-			setItems(data);
-		} catch (error) {
-			console.error("Error fetching items:", error);
-		}
-	};
 	// POST HANDLER and states
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [errorMessage, setErrorMessage] = useState<string | null>(null);
