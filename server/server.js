@@ -10,7 +10,7 @@ const uri = process.env.MONGODB_URI;
 const PORT = process.env.PORT || 8080;
 
 app.use(cors({
-  origin: 'https://phwanyayanga.onrender.com',
+  origin: 'https://phwanyayanga.onrender.com/',
 }));
 app.use(express.urlencoded({ extended: true })); // For parsing application/x-www-form-urlencoded
 app.use(express.json()); // For parsing application/json
