@@ -125,7 +125,8 @@ function Page() {
 					body: JSON.stringify(formData),
 				},
 			);
-
+			console.log("Response:", response);
+			console.log("Form data before update:", formData);
 			if (response.ok) {
 				alert("Item updated successfully");
 				// Close the dialog and refetch items
