@@ -33,7 +33,7 @@ function Page() {
 	const fetchItems = async () => {
 		try {
 			const response = await fetch(
-				`${process.env.NEXT_PUBLIC_API_URL}/api/crud/menuitems`,
+				"https://phwanyayanga-bvck3nd.onrender.com/api/crud/menuitems"
 			);
 			const data = await response.json();
 			setItems(data);
