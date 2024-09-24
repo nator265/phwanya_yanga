@@ -3,7 +3,6 @@ import { ModeToggle } from "../components/ui/ModeToggle";
 import {
 	Card,
 	CardContent,
-	CardDescription,
 	CardFooter,
 	CardHeader,
 	CardTitle,
