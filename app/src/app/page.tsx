@@ -18,16 +18,22 @@ const page = () => {
 				<div className='right w-[85%] h-[100vh] border dark:border-white p-3 overflow-y-scroll'>
 					{/* mainsectionheader needs to be a component so that it can be reused by other pages */}
 					<div className='mainsectionheader flex'>
-						<div className='header h-[30px] w-[50%] '>
+						<div className='header h-[30px] w-[80%] '>
 							<h1 className='text-2xl'>Phwanya Yanga</h1>
 						</div>
-						<div className='tools text-right h-[30px] w-[50%]'>
+						<div className='tools text-right h-[30px] w-[20%]'>
 							<ModeToggle />
 						</div>
 					</div>
-					<div className='first w-[100%] h-[150px] border dark:border-white flex mt-10'>
-						<div className='sales border dark:border-white h-[100%] w-[50%]'></div>
-						<div className='sales2 border dark:border-white h-[100%] w-[50%]'></div>
+					<div className='first w-[100%] border dark:border-white h-[200px] mt-10'>
+						<div className='flex w-[100%] h-[50%] border border-white'>
+							<div className='sales h-[100%] w-[50%] border dark:border-white'></div>
+							<div className='sales2 h-[100%] w-[50%] border dark:border-white'></div>
+						</div>
+						<div className='flex w-[100%] h-[50%] border border-white'>
+							<div className='sales h-[100%] w-[50%] border dark:border-white'></div>
+							<div className='sales2 h-[100%] w-[50%] border dark:border-white'></div>
+						</div>
 					</div>
 					<div className='second h-[300px] w-[100%] mt-10'>
 						<div className='chart border border-white w-[100%] h-[100%]'></div>
