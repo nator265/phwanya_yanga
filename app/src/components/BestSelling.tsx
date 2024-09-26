@@ -50,7 +50,7 @@ const BestSelling = () => {
 							/>
 						</CardContent>
 						<CardFooter className='dark:text-gray-400'>
-							<p>items</p>
+							<p>Chips and Chicken (300)</p>
 						</CardFooter>
 					</Card>
 				</div>
@@ -71,7 +71,7 @@ const BestSelling = () => {
 							/>
 						</CardContent>
 						<CardFooter className='dark:text-gray-400'>
-							<p>items</p>
+							<p>Rice and beef (280)</p>
 						</CardFooter>
 					</Card>
 				</div>
@@ -90,7 +90,7 @@ const BestSelling = () => {
 							/>
 						</CardContent>
 						<CardFooter className='dark:text-gray-400'>
-							<p>items</p>
+							<p>Chocolate Ice Cream</p>
 						</CardFooter>
 					</Card>
 				</div>
