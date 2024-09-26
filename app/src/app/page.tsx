@@ -3,6 +3,7 @@ import { ModeToggle } from "../components/ui/ModeToggle";
 import { LinearChart } from "../components/LinearChart";
 import AnalyticsCard from "../components/AnalyticsCard";
 import RecentOrders from "../components/RecentOrders";
+import { OrderStats } from "../components/OrderStats";
 
 const page = () => {
 	return (
@@ -32,21 +33,27 @@ const page = () => {
 						<div className='numbersCard w-[100%]  h-[520px] mt-12 text-white'>
 							<AnalyticsCard />
 						</div>
-						<div className='chart h-[400px] w-[100%]'>
+						<div className='chart h-[400px] w-[100%] mt-10'>
 							<div className='chart w-[100%] h-[100%]'>
 								<LinearChart />
 							</div>
 						</div>
 					</div>
-					<div className="orders border border-white mt-10">
-						<div className="recentOrders"><RecentOrders/></div>
-						<div className="ordersChart"></div>
+					<div className='orders border border-white mt-10'>
+						<div className='recentOrders'>
+							<RecentOrders />
+						</div>
+						<div className='ordersChart mt-5'>
+							<OrderStats />
+						</div>
 					</div>
 					<div>
 						{/* footer needs to be a component so that it can be reused by other pages */}
-                        <div className='footer mt-12'>
-                            <p className='text-center text-gray-600'>�� 2022 Phyanya Yanga. All rights reserved.</p>
-                        </div>
+						<div className='footer mt-12'>
+							<p className='text-center text-gray-600'>
+								�� 2022 Phyanya Yanga. All rights reserved.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>

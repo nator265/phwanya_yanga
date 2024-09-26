@@ -7,25 +7,39 @@ const RecentOrders = () => {
 				<h2 className='text-2xl font-medium'>Recent Orders</h2>
 			</div>
 			<div className='dataSection'>
-				<table>
-					<thead>
+				<table className='w-[100%] justify-center'>
+					<thead className='text-center w-[100%] align-center border border-white'>
 						<tr>
 							<th>Customer</th>
 							<th>Order</th>
 							<th>Total</th>
 							<th>Status</th>
-							<th>Date</th>
-							<th>Action</th>
 						</tr>
 					</thead>
-					<tbody>
-						<tr>
+					<tbody className='text-center'>
+						<tr className=''>
 							<td>James</td>
 							<td>chips and chicken</td>
-							<td>MWk 7,000</td>
+							<td>MWK7,000</td>
 							<td>pending</td>
-							<td>12 sept 2024</td>
-							<td>actions</td>
+						</tr>
+						<tr className=''>
+							<td>James</td>
+							<td>chips and chicken</td>
+							<td>MWK7,000</td>
+							<td>pending</td>
+						</tr>
+						<tr className=''>
+							<td>James</td>
+							<td>chips and chicken</td>
+							<td>MWK7,000</td>
+							<td>pending</td>
+						</tr>
+						<tr className=''>
+							<td>James</td>
+							<td>chips and chicken</td>
+							<td>MWK7,000</td>
+							<td>pending</td>
 						</tr>
 					</tbody>
 				</table>
