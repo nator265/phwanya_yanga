@@ -9,7 +9,7 @@ import BestSelling from "../components/BestSelling"
 
 const page = () => {
 	return (
-		<div className='dark:bg-[#050505] bg-[#fdfbfb]'>
+		<div className='dark:bg-[#000000] bg-[#fdfbfb]'>
 			<div className='flex columns-2 w-[100%] overflow-hidden'>
 				<div className='left hidden w-[40%] h-[100vh] text-center border dark:border-white p-3'>
 					<div className='header'>
