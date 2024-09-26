@@ -4,6 +4,7 @@ import { LinearChart } from "../components/LinearChart";
 import AnalyticsCard from "../components/AnalyticsCard";
 import RecentOrders from "../components/RecentOrders";
 import { OrderStats } from "../components/OrderStats";
+import MenuCards from "@/components/MenuCards";
 
 const page = () => {
 	return (
@@ -30,7 +31,7 @@ const page = () => {
 						</div>
 					</div>
 					<div className='sales'>
-						<div className='numbersCard w-[100%]  h-[520px] mt-12 text-white'>
+						<div className='numbersCard w-[100%]  h-[520px] mt-10 text-white'>
 							<AnalyticsCard />
 						</div>
 						<div className='chart h-[400px] w-[100%] mt-10'>
@@ -47,11 +48,16 @@ const page = () => {
 							<OrderStats />
 						</div>
 					</div>
+					<div className="menu">
+						<div className="cards mt-10">
+							<MenuCards />
+						</div>
+					</div>
 					<div>
 						{/* footer needs to be a component so that it can be reused by other pages */}
 						<div className='footer mt-12'>
 							<p className='text-center text-gray-600'>
-								�� 2022 Phyanya Yanga. All rights reserved.
+								�� 2024 Phyanya Yanga. All rights reserved.
 							</p>
 						</div>
 					</div>

@@ -24,42 +24,42 @@ import {
 export const description = "A donut chart with text";
 
 const chartData = [
-	{ browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-	{ browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-	{ browser: "firefox", visitors: 287, fill: "var(--color-firefox)" },
-	{ browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-	{ browser: "other", visitors: 190, fill: "var(--color-other)" },
+	{ status: "delivered", orders: 275, fill: "var(--color-delivered)" },
+	{ status: "processing", orders: 200, fill: "var(--color-processing)" },
+	{ status: "hold", orders: 287, fill: "var(--color-hold)" },
+	{ status: "returned", orders: 173, fill: "var(--color-returned)" },
+	{ status: "cancelled", orders: 190, fill: "var(--color-cancelled)" },
 ];
 
 const chartConfig = {
-	visitors: {
-		label: "Visitors",
+	orders: {
+		label: "orders",
 	},
-	chrome: {
+	delivered: {
 		label: "Delivered",
 		color: "hsl(var(--chart-1))",
 	},
-	safari: {
+	processing: {
 		label: "Processing",
 		color: "hsl(var(--chart-2))",
 	},
-	firefox: {
+	hold: {
 		label: "Hold",
 		color: "hsl(var(--chart-3))",
 	},
-	edge: {
+	returned: {
 		label: "Returned",
 		color: "hsl(var(--chart-4))",
 	},
-	other: {
+	cancelled: {
 		label: "Cancelled",
 		color: "hsl(var(--chart-5))",
 	},
 } satisfies ChartConfig;
 
 export function OrderStats() {
-	const totalVisitors = React.useMemo(() => {
-		return chartData.reduce((acc, curr) => acc + curr.visitors, 0);
+	const totalorders = React.useMemo(() => {
+		return chartData.reduce((acc, curr) => acc + curr.orders, 0);
 	}, []);
 
 	return (
@@ -79,8 +79,8 @@ export function OrderStats() {
 						/>
 						<Pie
 							data={chartData}
-							dataKey='visitors'
-							nameKey='browser'
+							dataKey='orders'
+							nameKey='status'
 							innerRadius={60}
 							strokeWidth={5}>
 							<Label
@@ -96,13 +96,13 @@ export function OrderStats() {
 													x={viewBox.cx}
 													y={viewBox.cy}
 													className='fill-foreground text-3xl font-bold'>
-													{totalVisitors.toLocaleString()}
+													{totalorders.toLocaleString()}
 												</tspan>
 												<tspan
 													x={viewBox.cx}
 													y={(viewBox.cy || 0) + 24}
 													className='fill-muted-foreground'>
-													Visitors
+													Orders
 												</tspan>
 											</text>
 										);
@@ -111,7 +111,7 @@ export function OrderStats() {
 							/>
 						</Pie>
 						<ChartLegend
-							content={<ChartLegendContent nameKey='browser' />}
+							content={<ChartLegendContent nameKey='status' />}
 							className='-translate-y-2 flex-wrap gap-2 [&>*]:basis-1/4 [&>*]:justify-center'
 						/>
 					</PieChart>
@@ -122,7 +122,7 @@ export function OrderStats() {
 					Trending up by 5.2% this month <TrendingUp className='h-4 w-4' />
 				</div>
 				<div className='leading-none text-muted-foreground'>
-					Showing total visitors for the last 6 months
+					Showing total orders for the last 6 months
 				</div>
 			</CardFooter>
 		</Card>
