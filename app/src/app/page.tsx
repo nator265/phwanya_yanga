@@ -1,13 +1,9 @@
 import React from "react";
 import { ModeToggle } from "../components/ui/ModeToggle";
-import {
-	Card,
-	CardContent,
-	CardFooter,
-	CardHeader,
-	CardTitle,
-} from "@/components/ui/card";
-import { LinearChart } from "../components/LinearChart"
+import { LinearChart } from "../components/LinearChart";
+import AnalyticsCard from "../components/AnalyticsCard";
+import RecentOrders from "../components/RecentOrders";
+
 const page = () => {
 	return (
 		<div>
@@ -32,91 +28,25 @@ const page = () => {
 							<ModeToggle />
 						</div>
 					</div>
-					<div className='first w-[100%]  h-[500px] mt-10 text-white'>
-						<div className='flex w-[100%] h-[50%] justify-center'>
-							<div className='sales h-[100%] w-[50%] mr-3'>
-								<Card className='bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-orange-600 via-orange-400 to-orange-200'>
-									<CardHeader>
-										<CardTitle className='text-2xl text-white'>
-											Products <br /> Sold
-										</CardTitle>
-									</CardHeader>
-									<CardContent>
-										<h2 className='text-3xl text-white'>
-											<b>1000</b>
-										</h2>
-									</CardContent>
-									<CardFooter>
-										<p>increased by 2.25%</p>
-									</CardFooter>
-								</Card>
-							</div>
-							<div className='sales2 h-[100%] w-[50%] ml-3 text-white'>
-								<Card className='bg-gradient-to-b from-purple-400 via-violet-500 to-indigo-600'>
-									<CardHeader>
-										<CardTitle className='text-2xl text-white'>
-											Total <br />
-											Sales
-										</CardTitle>
-									</CardHeader>
-									<CardContent>
-										<h2 className='text-3xl text-white'>
-											<b>1000</b>
-										</h2>
-									</CardContent>
-									<CardFooter>
-										<p>increased by 2.25%</p>
-									</CardFooter>
-								</Card>
-							</div>
+					<div className='sales'>
+						<div className='numbersCard w-[100%]  h-[520px] mt-12 text-white'>
+							<AnalyticsCard />
 						</div>
-						<div className='flex w-[100%] h-[50%] justify-center'>
-							<div className='sales h-[100%] w-[50%] mr-3'>
-								<Card className='bg-gradient-to-br from-violet-500 via-purple-600 to-indigo-700'>
-									<CardHeader>
-										<CardTitle className='text-2xl text-white'>
-											Total <br/>Revenue
-										</CardTitle>
-									</CardHeader>
-									<CardContent>
-										<h2 className='text-3xl text-white'>
-											<b>1000</b>
-										</h2>
-									</CardContent>
-									<CardFooter>
-										<p>increased by 2.25%</p>
-									</CardFooter>
-								</Card>
-							</div>
-							<div className='sales2 h-[100%] w-[50%] ml-3'>
-								<Card className='bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-fuchsia-600 via-fuchsia-400 to-fuchsia-200'>
-									<CardHeader>
-										<CardTitle className='text-2xl text-white'>
-											Total <br /> Users
-										</CardTitle>
-									</CardHeader>
-									<CardContent>
-										<h2 className='text-3xl text-white'>
-											<b>1000</b>
-										</h2>
-									</CardContent>
-									<CardFooter>
-										<p>increased by 2.25%</p>
-									</CardFooter>
-								</Card>
+						<div className='chart h-[400px] w-[100%]'>
+							<div className='chart w-[100%] h-[100%]'>
+								<LinearChart />
 							</div>
 						</div>
 					</div>
-					<div className='second h-[400px] w-[100%] mt-10'>
-						<div className='chart border border-white w-[100%] h-[100%]'>
-							<LinearChart />
-						</div>
+					<div className="orders border border-white mt-10">
+						<div className="recentOrders"><RecentOrders/></div>
+						<div className="ordersChart"></div>
 					</div>
-					<div className='third h-[120px] w-[100%] flex mt-10'>
-						<div className='  h-[100%] w-[25%] '></div>
-						<div className=' border dark:border-white h-[100%] w-[25%]  '></div>
-						<div className=' border dark:border-white h-[100%] w-[25%]  '></div>
-						<div className=' border dark:border-white h-[100%] w-[25%]  '></div>
+					<div>
+						{/* footer needs to be a component so that it can be reused by other pages */}
+                        <div className='footer mt-12'>
+                            <p className='text-center text-gray-600'>�� 2022 Phyanya Yanga. All rights reserved.</p>
+                        </div>
 					</div>
 				</div>
 			</div>
