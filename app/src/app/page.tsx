@@ -5,6 +5,7 @@ import AnalyticsCard from "../components/AnalyticsCard";
 import RecentOrders from "../components/RecentOrders";
 import { OrderStats } from "../components/OrderStats";
 import MenuCards from "@/components/MenuCards";
+import BestSelling from "../components/BestSelling"
 
 const page = () => {
 	return (
@@ -40,6 +41,11 @@ const page = () => {
 							</div>
 						</div>
 					</div>
+					<div className='bestSelling'>
+						<div className='cards mt-12'>
+							<BestSelling />
+						</div>
+					</div>
 					<div className='orders mt-10'>
 						<div className='recentOrders'>
 							<RecentOrders />
@@ -48,8 +54,8 @@ const page = () => {
 							<OrderStats />
 						</div>
 					</div>
-					<div className="menu">
-						<div className="cards mt-10">
+					<div className='menu'>
+						<div className='cards mt-12'>
 							<MenuCards />
 						</div>
 					</div>
