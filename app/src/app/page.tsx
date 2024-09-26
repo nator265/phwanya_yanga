@@ -39,11 +39,11 @@ const page = () => {
 							</div>
 						</div>
 					</div>
-					<div className='orders border border-white mt-10'>
+					<div className='orders mt-10'>
 						<div className='recentOrders'>
 							<RecentOrders />
 						</div>
-						<div className='ordersChart mt-5'>
+						<div className='ordersChart mt-10'>
 							<OrderStats />
 						</div>
 					</div>
