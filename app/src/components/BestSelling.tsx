@@ -90,7 +90,7 @@ const BestSelling = () => {
 							/>
 						</CardContent>
 						<CardFooter className='dark:text-gray-400'>
-							<p>Chocolate Ice Cream</p>
+							<p>Chocolate Ice Cream (180)</p>
 						</CardFooter>
 					</Card>
 				</div>
