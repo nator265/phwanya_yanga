@@ -5,7 +5,8 @@ import AnalyticsCard from "../components/AnalyticsCard";
 import RecentOrders from "../components/RecentOrders";
 import { OrderStats } from "../components/OrderStats";
 import MenuCards from "@/components/MenuCards";
-import BestSelling from "../components/BestSelling"
+import BestSelling from "../components/BestSelling";
+import { Button } from "@/components/ui/button";
 
 const page = () => {
 	return (
@@ -40,6 +41,9 @@ const page = () => {
 								<LinearChart />
 							</div>
 						</div>
+						<div className='w-[100%] flex justify-center mt-10'>
+							<Button>View all Sales</Button>
+						</div>
 					</div>
 					<div className='bestSelling'>
 						<div className='cards mt-12'>
@@ -54,9 +58,15 @@ const page = () => {
 							<OrderStats />
 						</div>
 					</div>
+					<div className='w-[100%] flex justify-center mt-10'>
+						<Button>View all Orders</Button>
+					</div>
 					<div className='menu'>
 						<div className='cards mt-12'>
 							<MenuCards />
+						</div>
+						<div className='w-[100%] flex justify-center mt-10'>
+							<Button>View Menu</Button>
 						</div>
 					</div>
 					<div>
