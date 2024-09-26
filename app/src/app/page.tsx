@@ -7,6 +7,9 @@ import { OrderStats } from "../components/OrderStats";
 import MenuCards from "@/components/MenuCards";
 import BestSelling from "../components/BestSelling";
 import { Button } from "@/components/ui/button";
+import Promotions from "../components/Promotions";
+import Reviews from "../components/Reviews";
+import Link from "next/link";
 
 const page = () => {
 	return (
@@ -42,7 +45,9 @@ const page = () => {
 							</div>
 						</div>
 						<div className='w-[100%] flex justify-center mt-10'>
-							<Button>View all Sales</Button>
+							<Link href='/sales'>
+								<Button>View all Sales</Button>
+							</Link>
 						</div>
 					</div>
 					<div className='bestSelling'>
@@ -67,6 +72,22 @@ const page = () => {
 						</div>
 						<div className='w-[100%] flex justify-center mt-10'>
 							<Button>View Menu</Button>
+						</div>
+					</div>
+					<div className='promotions&discounts mt-10'>
+						<div className='promotions'>
+							<Promotions />
+						</div>
+						<div className='w-[100%] flex justify-center mt-10'>
+							<Button>View Promotions</Button>
+						</div>
+					</div>
+					<div className='customerreviews mt-10'>
+						<div className='reviews'>
+							<Reviews />
+						</div>
+						<div className='w-[100%] flex justify-center mt-10'>
+							<Button>View all Reviews</Button>
 						</div>
 					</div>
 					<div>
