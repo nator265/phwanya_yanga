@@ -18,25 +18,25 @@ const RecentOrders = () => {
 					</thead>
 					<tbody className='text-center'>
 						<tr className=''>
-							<td>James</td>
+							<td>Lovely</td>
 							<td>chips and chicken</td>
 							<td>MWK7,000</td>
 							<td>pending</td>
 						</tr>
 						<tr className=''>
-							<td>James</td>
+							<td>Kim</td>
 							<td>chips and chicken</td>
 							<td>MWK7,000</td>
 							<td>pending</td>
 						</tr>
 						<tr className=''>
-							<td>James</td>
+							<td>Muwemi</td>
 							<td>chips and chicken</td>
 							<td>MWK7,000</td>
 							<td>pending</td>
 						</tr>
 						<tr className=''>
-							<td>James</td>
+							<td>Judith</td>
 							<td>chips and chicken</td>
 							<td>MWK7,000</td>
 							<td>pending</td>
