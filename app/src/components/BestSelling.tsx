@@ -36,7 +36,7 @@ const BestSelling = () => {
 					</Card>
 				</div>
 				<div className='sales2 h-[100%] w-[50%] ml-3'>
-					<Card className=''>
+					<Card className='h-[300px]'>
 						<CardHeader>
 							<CardTitle className='text-2xl'>Lunch</CardTitle>
 						</CardHeader>
@@ -57,7 +57,7 @@ const BestSelling = () => {
 			</div>
 			<div className='flex w-[100%] h-[50%] justify-center'>
 				<div className='sales h-[100%] w-[50%] mr-3'>
-					<Card className=''>
+					<Card className='h-[300px]'>
 						<CardHeader>
 							<CardTitle className='text-2xl'>Diner</CardTitle>
 						</CardHeader>
