@@ -1,14 +1,15 @@
 import React from "react";
-import { ModeToggle } from "../components/ui/ModeToggle";
-import { LinearChart } from "../components/LinearChart";
-import AnalyticsCard from "../components/AnalyticsCard";
-import RecentOrders from "../components/RecentOrders";
-import { OrderStats } from "../components/OrderStats";
+import "../../app/globals.css"; 
+import { ModeToggle } from "../../components/ui/ModeToggle";
+import { LinearChart } from "../../components/LinearChart";
+import AnalyticsCard from "../../components/AnalyticsCard";
+import RecentOrders from "../../components/RecentOrders";
+import { OrderStats } from "../../components/OrderStats";
 import MenuCards from "@/components/MenuCards";
-import BestSelling from "../components/BestSelling";
+import BestSelling from "../../components/BestSelling";
 import { Button } from "@/components/ui/button";
-import Promotions from "../components/Promotions";
-import Reviews from "../components/Reviews";
+import Promotions from "../../components/Promotions";
+import Reviews from "../../components/Reviews";
 import Link from "next/link";
 
 const page = () => {
@@ -45,7 +46,7 @@ const page = () => {
 							</div>
 						</div>
 						<div className='w-[100%] flex justify-center mt-10'>
-							<Link href='/sales'>
+							<Link href='/admin/sales'>
 								<Button>View all Sales</Button>
 							</Link>
 						</div>
@@ -71,7 +72,9 @@ const page = () => {
 							<MenuCards />
 						</div>
 						<div className='w-[100%] flex justify-center mt-10'>
-							<Button>View Menu</Button>
+							<Link href={'/admin/menu'}>
+								<Button>View items</Button>
+							</Link>
 						</div>
 					</div>
 					<div className='promotions&discounts mt-10'>
